@@ -1,0 +1,132 @@
+.my-blogs-div {
+  max-width: 1400px;
+  margin: 40px auto;
+  padding: 3rem 1rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.my-blogs-div h2 {
+  text-align: center;
+  color: blueviolet;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.grid-blog {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.my-card {
+  background: linear-gradient(120deg, crimson, blueviolet);
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  padding: 20px;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.my-card:hover {
+  transform: translateY(-5px);
+}
+
+.my-title {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.my-date {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  color: #eee;
+}
+
+.my-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.delete-btn,
+.edit-btn {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: white;
+  color: blueviolet;
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: background-color 0.3s, transform 0.2s ease, color 0.3s;
+}
+
+.delete-btn:hover,
+.edit-btn:hover {
+  transform: scale(1.05);
+  color: white;
+  background: linear-gradient(345deg, crimson, blueviolet);
+}
+
+.delete-btn i,
+.edit-btn i {
+  font-size: 1rem;
+}
+
+@media (max-width: 992px) {
+  .grid-blog {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .my-blogs-div {
+    padding: 2rem 1rem;
+    margin: 20px;
+  }
+
+  .my-title {
+    font-size: 1.1rem;
+  }
+
+  .my-date {
+    font-size: 0.9rem;
+  }
+
+  .delete-btn,
+  .edit-btn {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .my-blogs-div {
+    padding: 2.5rem 1rem;
+    margin: 1rem;
+  }
+
+  .my-actions {
+    flex-direction: column;
+  }
+
+  .delete-btn,
+  .edit-btn {
+    width: 100%;
+  }
+
+  .my-card {
+    padding: 15px;
+  }
+}

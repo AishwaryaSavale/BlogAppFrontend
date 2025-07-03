@@ -1,0 +1,129 @@
+.blog-container {
+  max-width: 1400px;
+  margin: 40px auto;
+  padding: 2.9rem 0;
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.blog-card {
+  background: linear-gradient(120deg, crimson, blueviolet);
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+}
+
+.blog-card h3 {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.name p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+  color: #eee;
+}
+
+.blog-content {
+  margin: 15px 0;
+  white-space: pre-line;
+  overflow: hidden;
+  font-size: 1rem;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.blog-content.scrollable {
+  max-height: 120px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.blog-content.scrollable::-webkit-scrollbar {
+  width: 6px;
+}
+
+.blog-content.scrollable::-webkit-scrollbar-thumb {
+  background-color: #ddd;
+  border-radius: 3px;
+}
+
+.btn {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.btn button {
+  flex: 1 1 auto;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 0.5rem;
+  color: blueviolet;
+  cursor: pointer;
+  background-color: white;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+}
+
+.btn button:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+  background: linear-gradient(345deg, crimson, blueviolet);
+  color: white;
+}
+
+@media (max-width: 992px) {
+  .blog-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-container {
+    padding: 15px;
+    margin: 20px;
+  }
+
+  .tts-buttons button {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-container {
+    padding: 4rem 0;
+    margin: 1rem;
+  }
+
+  .tts-buttons {
+    flex-direction: row;
+  }
+
+  .tts-buttons button {
+    width: 10%;
+  }
+
+  .blog-card {
+    padding: 15px;
+  }
+}
