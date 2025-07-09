@@ -26,7 +26,7 @@ export default function Blog() {
   const handleSpeak = (text) => {
     speechSynthesis.cancel();
     const newUtterance = new SpeechSynthesisUtterance(text);
-    newUtterance.lang = 'hi-IN'; 
+    newUtterance.lang = 'en-IN'; 
     newUtterance.rate = 1;
     setUtterance(newUtterance);
     speechSynthesis.speak(newUtterance);
